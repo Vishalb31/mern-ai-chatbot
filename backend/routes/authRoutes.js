@@ -56,13 +56,13 @@ router.post("/register", async (req, res) => {
       },
     });
   } catch (error) {
-    console.log(error);
+  console.error("REGISTER ERROR:", error);
 
-    res.status(500).json({
-      message: "Server Error",
-    });
-  }
-});
+  res.status(500).json({
+    message: error.message,
+    error: error,
+  });
+}
 
 
 // LOGIN
@@ -114,12 +114,12 @@ router.post("/login", async (req, res) => {
       },
     });
   } catch (error) {
-    console.log(error);
+  console.error("REGISTER ERROR:", error);
 
-    res.status(500).json({
-      message: "Server Error",
-    });
-  }
-});
+  res.status(500).json({
+    message: error.message,
+    error: error,
+  });
+}
 
 export default router;
