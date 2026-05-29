@@ -134,7 +134,7 @@ function Chat() {
 
     try {
       const res = await axios.post(
-        "http://localhost:5000/api/chat",
+        "https://mern-ai-chatbot-s725.onrender.com",
         {
           message: currentMessage,
         },
